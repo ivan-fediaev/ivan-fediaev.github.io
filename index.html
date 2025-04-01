@@ -10,35 +10,54 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            padding: 20px;
         }
         img {
-            max-width: 100%;
+            width: 90%; /* Adjusts to screen size */
+            max-width: 400px; /* Prevents it from getting too large */
             height: auto;
             margin-bottom: 20px;
+            border-radius: 10px; /* Optional: Adds rounded corners */
+        }
+        p {
+            font-size: 16px; /* Adjusts text size for readability */
+            max-width: 500px;
         }
         .button {
             display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 12px 24px;
+            font-size: 18px;
             color: white;
             background-color: #007BFF;
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
+            transition: background 0.3s ease-in-out;
         }
         .button:hover {
             background-color: #0056b3;
         }
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            p {
+                font-size: 14px;
+            }
+            .button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
-    <img src="corpslop.jpeg" alt="Welcome Image">
-    <h1>Welcome</h1>
-    <p>VOC Volunteers recently placed cameras at Burton hut as part of our new program to ensure all our huts are under constant surveillance.</p>
-    <a href="hello-world.gif" class="button">Webcam</a>
+    <img src="burton_real.jpeg" alt="Welcome Image">
+    <p>In an effort to further improve the Burton Hut roof after its repair this summer, the VOC Huts and Trails committee has installed a webcam livestream! </p>
+    <p>Powered by Starlink, we wanted a live view of Garibladi Lake so now we know when it's frozen and ready to cross and have fun times at Burton Hut!</p>
+    <p>The webcam is powered by STOKE: Solar-Thermal Off-grid Kinetic Energy, a new technology that we are deploying in our backcountry huts. We hope to install projectors in the near future so that livestreaming our favourite content creators will be possible!</p>
+    <a href="hello-world.gif" class="button">Check it out!</a>
 </body>
 </html>
